@@ -10,4 +10,14 @@ Se desarrollará un mecanismo de cierre automático que responda de manera rápi
 - Esp32CAM
 - Sensor de gas LP MQ-6
 - Jumpers Hembra -Hembra
+- FTD1232 USB
 - 
+
+## Conexion ESP32CAM y FTD1232 USB
+| ESP32CAM      | FTD1232 USB |
+| --------- | -----:|
+| 5V  | Vcc |
+| GND     |   GND |
+| UOT      |    RX |
+| UOR      |    TX |
+| 1O0-   GND |
