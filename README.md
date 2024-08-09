@@ -47,7 +47,8 @@ Se desarrollará un mecanismo de cierre automático que responda de manera rápi
 
 ## Codigo  de conexión ESP32CAM y M1-6
 
-´´´
+```
+
 #define VALVE_PIN 7  // Pin digital que controlará el relé de la válvula
 #define MQ6_PIN 14
 
