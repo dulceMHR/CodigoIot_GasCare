@@ -13,7 +13,7 @@ Se desarrollará un mecanismo de cierre automático que responda de manera rápi
 - FTD1232 USB
 - 
 
-## Conexion ESP32CAM y FTD1232 USB
+## Conexión ESP32CAM y FTD1232 USB
 | ESP32CAM      | FTD1232 USB |
 | --------- | -----:|
 | 5V  | Vcc |
@@ -21,3 +21,10 @@ Se desarrollará un mecanismo de cierre automático que responda de manera rápi
 | UOT      |    RX |
 | UOR      |    TX |
 | 1O0-   GND |
+
+##Conexión de ESP2CAM y MQ-6
+| ESP32CAM      | MQ-6 |
+| --------- | -----:|
+|  3.3V    |   Vcc  |
+| GND     |    GND |
+| 114PIN      |     ADC |
