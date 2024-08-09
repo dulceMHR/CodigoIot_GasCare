@@ -7,3 +7,8 @@ confiable y preciso mediante el uso de sensores adecuados.
 Se desarrollará un mecanismo de cierre automático que responda de manera rápida
 y efectiva ante la detección de una fuga de gas.
 
+## Material necesario
+- RasberryPi4
+- Esp32CAM
+- Sensor de gas LP MQ-6
+- Jumpers Hembra -Hembra
