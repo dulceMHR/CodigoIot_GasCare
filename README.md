@@ -38,16 +38,16 @@ Se desarrollará un mecanismo de cierre automático que responda de manera rápi
 | UOR      |    TX |
 | 1O0-   GND |
 
-##Conexión de ESP2CAM y MQ-6
+## Conexión de ESP2CAM y MQ-6
 | ESP32CAM      | MQ-6 |
 | --------- | ------|
 |  3.3V    |   Vcc  |
 | GND     |    GND |
 | 114PIN      |     ADC |
 
-##Codigo  de conexión ESP32CAM y M1-6
+## Codigo  de conexión ESP32CAM y M1-6
 
-```cpp
+´´´
 #define VALVE_PIN 7  // Pin digital que controlará el relé de la válvula
 #define MQ6_PIN 14
 
