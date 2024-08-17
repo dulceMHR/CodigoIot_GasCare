@@ -84,28 +84,73 @@ En este proyecto, conectaremos un módulo ESP32-CAM a un adaptador USB FTD1232 p
 - **Reseteo**: En algunos casos, puede ser necesario reiniciar el ESP32-CAM manualmente después de cargar el código.
 
 
+## Conexión entre ESP32-CAM y el Sensor MQ-6
 
-## Conexión de ESP2CAM y MQ-6
-| ESP32CAM      | MQ-6 |
-| --------- | ------|
-|  3.3V    |   Vcc  |
-| GND     |    GND |
-| 114PIN      |     ADC |
+En este proyecto, conectaremos un módulo ESP32-CAM a un sensor de gas MQ-6 para detectar la concentración de gases como el butano y propano. A continuación se describe cómo realizar la conexión:
 
-##Conexión de relay con la RasberryPi4
+### Tabla de Conexiones
 
-| Relay      |RasberryPi4 |
-| --------- | ------|
-|  IN    |    GPIO 19  |
-| GND     |    GND |
-| VCC      |     5V |
+| ESP32-CAM | MQ-6   |
+| --------- | ------ |
+| 3.3V      | VCC    |
+| GND       | GND    |
+| GPIO 14 (PIN 14) | ADC    |
+
+### Descripción de las Conexiones
+
+1. **3.3V a VCC**: Conectamos el pin de 3.3V del ESP32-CAM al pin VCC del sensor MQ-6. Esto suministra la energía necesaria para que el sensor funcione.
+
+2. **GND a GND**: El pin GND del ESP32-CAM se conecta al pin GND del MQ-6. Esto establece una referencia de tierra común para ambos dispositivos.
+
+3. **GPIO 14 (PIN 14) a ADC**: El pin GPIO 14 del ESP32-CAM se conecta al pin ADC del sensor MQ-6. Este es el pin analógico que permite al ESP32-CAM leer la señal de salida del sensor, la cual representa la concentración de gas en el aire.
+
+### Diagrama de Conexión
+
+![Diagrama de Conexión](imagenes/conexiones_componentes.jpg)
+
+### Consideraciones Adicionales
+
+- **Calibración del Sensor**: El sensor MQ-6 puede requerir un tiempo de calentamiento inicial y una calibración adecuada para proporcionar lecturas precisas.
+- **Lectura Analógica**: Asegúrate de configurar correctamente el ADC en el ESP32-CAM para leer la señal del MQ-6 y convertirla en una concentración de gas en partes por millón (PPM).
+
+
+## Conexión entre Relé y Raspberry Pi 4
+
+En este proyecto, conectaremos un módulo de relé a una Raspberry Pi 4 para controlar dispositivos eléctricos como una válvula solenoide o un motor. A continuación se describe cómo realizar la conexión:
+
+### Tabla de Conexiones
+
+| Relé  | Raspberry Pi 4 |
+| ----- | -------------- |
+| IN    | GPIO 19        |
+| GND   | GND            |
+| VCC   | 5V             |
+
+### Descripción de las Conexiones
+
+1. **IN a GPIO 19**: Conectamos el pin IN del relé al pin GPIO 19 de la Raspberry Pi 4. Este pin se utilizará para enviar la señal de control que activa o desactiva el relé.
+
+2. **GND a GND**: El pin GND del relé se conecta al pin GND de la Raspberry Pi 4. Esto establece una referencia de tierra común para ambos dispositivos.
+
+3. **VCC a 5V**: El pin VCC del relé se conecta al pin de 5V de la Raspberry Pi 4. Esto suministra la energía necesaria para que el relé funcione.
+
+### Diagrama de Conexión
+
+![Diagrama de Conexión](imagenes/conexiones_componentes.jpg)
+
+### Consideraciones Adicionales
+
+- **Control de Dispositivos**: Asegúrate de que el dispositivo que estás controlando con el relé esté conectado correctamente al circuito de salida del relé.
+- **Precauciones de Seguridad**: Manipular corrientes eléctricas puede ser peligroso. Asegúrate de seguir todas las precauciones necesarias al trabajar con relés y dispositivos eléctricos.
+
+
 
 ## Conexión de relay y la Valvula Solenoide
 
 
 
 
-## Codigo  de conexión ESP32CAM y M1-6
+## Codigo  de conexión ESP32CAM y MQ-6
 
 ```
 
