@@ -76,7 +76,7 @@ En este proyecto, conectaremos un módulo ESP32-CAM a un adaptador USB FTD1232 p
 
 ### Diagrama de Conexión
 
-![Diagrama de Conexión](imagenes/conexiones_componentes.jpg)
+![Diagrama de conexionn](imagenes/conexiones_componentes.jpg)
 
 ### Consideraciones Adicionales
 
