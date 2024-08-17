@@ -17,6 +17,7 @@ Se desarrollará un mecanismo de cierre automático que responda de manera rápi
 - Electro Valvúla solenoide 12v
 - Relay
 
+
 ## Material de referencia
 - [rasberry pi OS](https://www.raspberrypi.com/software/operating-systems/ "rasberry pi OS")
 - [Node-Red](https://nodered.org/docs/getting-started/local "Node-Red")
@@ -46,6 +47,17 @@ Se desarrollará un mecanismo de cierre automático que responda de manera rápi
 |  3.3V    |   Vcc  |
 | GND     |    GND |
 | 114PIN      |     ADC |
+
+##Conexión de relay con la RasberryPi4
+
+| Relay      |RasberryPi4 |
+| --------- | ------|
+|  IN    |    GPIO 19  |
+| GND     |    GND |
+| VCC      |     5V |
+
+## Conexión de relay y la Valvula Solenoide
+
 
 ## Codigo  de conexión ESP32CAM y M1-6
 
