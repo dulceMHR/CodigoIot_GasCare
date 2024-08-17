@@ -1,6 +1,5 @@
 
-
-### CodigoIot_GasCare
+# CodigoIot_GasCare
 Prototipo de un sistema de detector de fugas de gas,  monitoreo de humedad y temperatura en cocinas. 
 ## Introducción
 El proyecto se enfocará en implementar prototipo para un sistema de detección de fugas de gas confiable y preciso mediante el uso de sensores, microcontroladores y codigo adecuado.
@@ -19,10 +18,14 @@ Se desarrollará un mecanismo de cierre automático que responda de manera rápi
 
 
 ## Material de referencia
-- [rasberry pi OS](https://www.raspberrypi.com/software/operating-systems/ "rasberry pi OS")
+- [Rasberry pi OS](https://www.raspberrypi.com/software/operating-systems/ "rasberry pi OS")
 - [Node-Red](https://nodered.org/docs/getting-started/local "Node-Red")
 - [Node-red Dashboard](https://flows.nodered.org/node/node-red-dashboard "Node-red Dashboard")
--
+- [Node Red DHT11](https://flows.nodered.org/node/node-red-contrib-dht-sensor "Node Red DHT11")
+- [Configuración del IDE para ESP32CAM](https://edu.codigoiot.com/mod/lesson/view.php?id=4390&pageid=4590&startlastseen=yes "Configuración del IDE para ESP32CAM")
+- [Introducción a MQTT (Broker Mosquitto)](https://edu.codigoiot.com/course/view.php?id=851 "Introducción a MQTT (Broker Mosquitto)")
+
+
 ## Conexión de RasberryPi y DHT11
 
 | RasberryPI4      | DHT11 |
@@ -30,6 +33,8 @@ Se desarrollará un mecanismo de cierre automático que responda de manera rápi
 |  3.3V    |   Vcc  |
 | GND     |    GND |
 | 114PIN      |     DAT |
+
+###### 
 
 ## Conexión ESP32CAM y FTD1232 USB
 
@@ -57,6 +62,8 @@ Se desarrollará un mecanismo de cierre automático que responda de manera rápi
 | VCC      |     5V |
 
 ## Conexión de relay y la Valvula Solenoide
+
+
 
 
 ## Codigo  de conexión ESP32CAM y M1-6
