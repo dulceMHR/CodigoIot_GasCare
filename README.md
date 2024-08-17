@@ -28,23 +28,62 @@ Se desarrollará un mecanismo de cierre automático que responda de manera rápi
 
 ## Conexión de RasberryPi y DHT11
 
-| RasberryPI4      | DHT11 |
-| --------- | ------|
-|  3.3V    |   Vcc  |
-| GND     |    GND |
-| 114PIN      |     DAT |
+En este proyecto, conectaremos un sensor de temperatura y humedad DHT11 a una Raspberry Pi 4 para leer los datos ambientales. A continuación se describe cómo realizar la conexión:
+
+### Tabla de Conexiones
+
+| Raspberry Pi 4 | DHT11 |
+| -------------- | ----- |
+| 3.3V           | VCC   |
+| GND            | GND   |
+| GPIO 17 (PIN 11) | DAT   |
+
+### Descripción de las Conexiones
+
+1. **3.3V a VCC**: Conectamos el pin de 3.3V de la Raspberry Pi al pin de VCC del sensor DHT11. Esto suministra la energía necesaria para que el sensor funcione.
+
+2. **GND a GND**: El pin GND de la Raspberry Pi se conecta al pin GND del DHT11. Esto establece una referencia de tierra común para ambos dispositivos.
+
+3. **GPIO 17 (PIN 11) a DAT**: El pin GPIO 17 (correspondiente al pin físico 11 en la Raspberry Pi) se conecta al pin DAT del sensor DHT11. Este es el pin de datos que permite la comunicación entre la Raspberry Pi y el sensor, enviando la información de temperatura y humedad captada por el DHT11.
 
 ###### 
 
-## Conexión ESP32CAM y FTD1232 USB
+## Conexión entre ESP32-CAM y FTD1232 USB
 
-| ESP32CAM      | FTD1232 USB |
-| --------| ----|
-| 5V  | Vcc |
-| GND     |   GND |
-| UOT      |    RX |
-| UOR      |    TX |
-| 1O0-   GND |
+En este proyecto, conectaremos un módulo ESP32-CAM a un adaptador USB FTD1232 para facilitar la programación y comunicación con el ESP32-CAM desde un ordenador. A continuación se describe cómo realizar la conexión:
+
+### Tabla de Conexiones
+
+| ESP32-CAM  | FTD1232 USB |
+| ---------- | ----------- |
+| 5V         | VCC         |
+| GND        | GND         |
+| UOT        | RX          |
+| UOR        | TX          |
+| IO0 (GPIO 0) a GND |        |
+
+### Descripción de las Conexiones
+
+1. **5V a VCC**: Conectamos el pin de 5V del ESP32-CAM al pin VCC del adaptador FTD1232 USB. Esto suministra la energía necesaria para que el ESP32-CAM funcione.
+
+2. **GND a GND**: El pin GND del ESP32-CAM se conecta al pin GND del FTD1232 USB. Esto establece una referencia de tierra común para ambos dispositivos.
+
+3. **UOT a RX**: El pin UOT del ESP32-CAM se conecta al pin RX del FTD1232 USB. Este es el pin de transmisión de datos desde el ESP32-CAM hacia el adaptador USB.
+
+4. **UOR a TX**: El pin UOR del ESP32-CAM se conecta al pin TX del FTD1232 USB. Este es el pin de recepción de datos desde el adaptador USB hacia el ESP32-CAM.
+
+5. **IO0 (GPIO 0) a GND**: Para poner el ESP32-CAM en modo de programación, es necesario conectar el pin IO0 (GPIO 0) a GND antes de encender el dispositivo. Esto permitirá cargar el código desde el ordenador.
+
+### Diagrama de Conexión
+
+![Diagrama de Conexión](imagenes/conexiones_componentes.jpg)
+
+### Consideraciones Adicionales
+
+- **Modo de Programación**: Asegúrate de que el pin IO0 esté conectado a GND al encender el ESP32-CAM para poder programarlo. Después de cargar el código, puedes desconectar IO0 de GND y reiniciar el ESP32-CAM para que funcione en modo normal.
+- **Reseteo**: En algunos casos, puede ser necesario reiniciar el ESP32-CAM manualmente después de cargar el código.
+
+
 
 ## Conexión de ESP2CAM y MQ-6
 | ESP32CAM      | MQ-6 |
